@@ -8,7 +8,7 @@ public class Pemilihan2Percobaan203 {
         double diskon = 0;
         int harga = 0;
         double total_bayar;
-
+        int potongan_qris = 1000;
 
         System.out.println("-----------------------------");
         System.out.println("===== MENU KAJE JTI ====");
@@ -68,6 +68,11 @@ public class Pemilihan2Percobaan203 {
             return;
         }
 
+        // Tambahan potongan QRIS
+        if (metode_pembayaran.equalsIgnoreCase("y")) {
+            total_bayar -= potongan_qris;
+            System.out.println("Anda mendapatkan potongan Rp. 1000 karena membayar melalui QRIS");
+        }
 
         System.out.println("Total bayar akhir = " + total_bayar);
         System.out.println("---------------------------------------");
